@@ -1,6 +1,10 @@
 @import './scss/variables';
 @import './scss/fonts';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #db9501;
   font-family: Arial, sans-serif;
@@ -65,6 +69,7 @@ body {
 
   .scroll {
     overflow-y: auto;
+    scroll-behavior: smooth;
     width: 100%;
 
     .items {

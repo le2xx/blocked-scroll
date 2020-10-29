@@ -1,7 +1,7 @@
 import './main.scss';
 import './index.html';
 
-const arr = Array.from({ length: 150 }, (v, k) =>  k * 50 );
+const arr = Array.from({ length: 50 }, (v, k) =>  k * 50 );
 let openModal: boolean;
 let htmlScrollTop: string = '0';
 
@@ -52,7 +52,7 @@ window.onload = () => {
     const nodes = indicator.querySelectorAll('.label');
     if (e.target.scrollTop) {
       nodes[1].querySelector('span').textContent = e.target.scrollTop || 0;
-      // console.log('modal', e);
+      console.log('modal', e);
     } else if (e.target.scrollingElement) {
       if (!openModal) {
         htmlScrollTop = e.target.scrollingElement.scrollTop;
@@ -60,7 +60,7 @@ window.onload = () => {
         e.target.scrollingElement.scrollTop = htmlScrollTop;
       }
       nodes[0].querySelector('span').textContent = htmlScrollTop;
-      // console.log('html', e);
+      console.log('html', e);
     }
   }
 
